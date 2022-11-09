@@ -1,0 +1,7 @@
+[1m[34mroot[0m ([32m./workspace[0m)[0m
+├── [1m[34mchild_1[0m ([32m./modules/module-1[0m)[0m
+│   ├── [1m[34mgrandchild_11[0m ([32m./modules/module-2[0m)[0m
+│   └── [1m[34mgrandchild_12[0m ([32m./modules/module-3[0m)[0m
+├── [1m[34mchild_2[0m ([32m./modules/module-2[0m)[0m
+└── [1m[34mchild_3[0m ([32m./modules/module-4[0m)[0m
+    └── [1m[34mgrandchild_31[0m ([32m./modules/module-3[0m)[0m

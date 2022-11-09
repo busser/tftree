@@ -1,0 +1,5 @@
+# Compiled binaries
+bin/
+
+# Local direnv configuration
+.envrc

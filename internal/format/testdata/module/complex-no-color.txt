@@ -1,0 +1,7 @@
+root (./workspace)
+├── child_1 (./modules/module-1)
+│   ├── grandchild_11 (./modules/module-2)
+│   └── grandchild_12 (./modules/module-3)
+├── child_2 (./modules/module-2)
+└── child_3 (./modules/module-4)
+    └── grandchild_31 (./modules/module-3)
