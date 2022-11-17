@@ -1,0 +1,14 @@
+name: Continous Integration
+
+on: [push, pull_request]
+
+jobs:
+  build-and-unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: "1.19"
+      - run: make build test
