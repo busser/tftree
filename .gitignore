@@ -3,3 +3,6 @@ bin/
 
 # Local direnv configuration
 .envrc
+
+# Release artifacts
+dist/
