@@ -31,7 +31,7 @@ changelog:
       - "^docs:"
       - "^test:"
 brews:
-  - name: tfautomv
+  - name: tftree
     homepage: https://github.com/busser/tftree
     description: Display your Terraform module call stack
     license: Apache-2.0
