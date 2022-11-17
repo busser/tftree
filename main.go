@@ -1,6 +1,8 @@
 package main
 
 import (
+	_ "embed"
+	"flag"
 	"fmt"
 	"os"
 
@@ -16,7 +18,21 @@ func main() {
 	}
 }
 
+//go:embed VERSION
+var version string
+
 func run() error {
+	parseFlags()
+
+	if noColor {
+		format.NoColor = true
+	}
+
+	if printVersion {
+		fmt.Println(version)
+		return nil
+	}
+
 	var workdir string
 	switch {
 	case len(os.Args) > 2:
@@ -53,4 +69,17 @@ func run() error {
 
 func logln(msg string) {
 	fmt.Fprint(os.Stderr, format.Info(msg))
+}
+
+// Flags
+var (
+	noColor      bool
+	printVersion bool
+)
+
+func parseFlags() {
+	flag.BoolVar(&noColor, "no-color", false, "disable color in output")
+	flag.BoolVar(&printVersion, "version", false, "print version and exit")
+
+	flag.Parse()
 }
