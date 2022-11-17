@@ -2,6 +2,8 @@
 
 Display your Terraform module call stack as a tree in your terminal.
 
+![screenshot](docs/screenshot.png)
+
 ## Installation
 
 With Homebrew:
