@@ -38,6 +38,12 @@ To disable output formatting (colors, bold text, etc.):
 tftree -no-color
 ```
 
+To use a different Terraform binary, like Terragrunt for example:
+
+```bash
+tftree -terraform-bin=terragrunt
+```
+
 ## License
 
 The code is licensed under the permissive Apache v2.0 license. [Read this](<https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)>) for a summary.

@@ -13,12 +13,14 @@ import (
 )
 
 type runner struct {
-	workdir string
+	workdir      string
+	terraformBin string
 }
 
-func NewRunner(workdir string) *runner {
+func NewRunner(workdir, terraformBin string) *runner {
 	r := runner{
-		workdir: workdir,
+		workdir:      workdir,
+		terraformBin: terraformBin,
 	}
 
 	return &r
@@ -71,7 +73,7 @@ func (r *runner) Version() (*semver.Version, error) {
 }
 
 func (r *runner) runCommand(args []string, out io.Writer) error {
-	cmd := exec.Command("terraform", args...)
+	cmd := exec.Command(r.terraformBin, args...)
 
 	var buf bytes.Buffer
 	cmd.Stdout = &buf

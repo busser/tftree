@@ -43,7 +43,7 @@ func run() error {
 		workdir = "."
 	}
 
-	tf := terraform.NewRunner(workdir)
+	tf := terraform.NewRunner(workdir, terraformBin)
 
 	logln("Running \"terraform init\"...")
 	err := tf.Init()
@@ -75,11 +75,13 @@ func logln(msg string) {
 var (
 	noColor      bool
 	printVersion bool
+	terraformBin string
 )
 
 func parseFlags() {
 	flag.BoolVar(&noColor, "no-color", false, "disable color in output")
 	flag.BoolVar(&printVersion, "version", false, "print version and exit")
+	flag.StringVar(&terraformBin, "terraform-bin", "terraform", "terraform binary to use")
 
 	flag.Parse()
 }
