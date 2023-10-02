@@ -11,13 +11,7 @@ builds:
     main: ./
     binary: tftree
 archives:
-  - replacements:
-      darwin: Darwin
-      linux: Linux
-      windows: Windows
-      386: i386
-      amd64: x86_64
-    format_overrides:
+  - format_overrides:
       - goos: windows
         format: zip
 checksum:
@@ -35,7 +29,7 @@ brews:
     homepage: https://github.com/busser/tftree
     description: Display your Terraform module call stack
     license: Apache-2.0
-    tap:
+    repository:
       owner: busser
       name: homebrew-tap
     install: |
