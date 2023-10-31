@@ -3,7 +3,7 @@ module github.com/busser/tftree
 go 1.19
 
 require (
-	github.com/Masterminds/semver/v3 v3.1.1
+	github.com/Masterminds/semver/v3 v3.2.1
 	github.com/hashicorp/terraform-json v0.14.0
 	github.com/mitchellh/colorstring v0.0.0-20190213212951-d06e56a500db
 )
