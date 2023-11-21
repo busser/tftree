@@ -62,7 +62,7 @@ func TestError(t *testing.T) {
 
 			const escapeSequence = "\x1b"
 			if tc.noColor && strings.Contains(want, escapeSequence) {
-				t.Errorf("Error() output contains espace sequence %q even though color is disabled:\n%q", escapeSequence, want)
+				t.Errorf("Error() output contains escape sequence %q even though color is disabled:\n%q", escapeSequence, want)
 			}
 
 			if want != actual {
