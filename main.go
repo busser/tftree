@@ -33,14 +33,15 @@ func run() error {
 		return nil
 	}
 
+	args := flag.Args()
 	var workdir string
-	switch {
-	case len(os.Args) > 2:
-		return fmt.Errorf("too many arguments, must be either 0 or 1")
-	case len(os.Args) == 2:
-		workdir = os.Args[1]
-	default:
+	switch len(args) {
+	case 0:
 		workdir = "."
+	case 1:
+		workdir = args[0]
+	default:
+		return fmt.Errorf("too many arguments, must be either 0 or 1")
 	}
 
 	tf := terraform.NewRunner(workdir, terraformBin)
