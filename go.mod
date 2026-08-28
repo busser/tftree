@@ -1,9 +1,9 @@
 module github.com/busser/tftree
 
-go 1.19
+go 1.21
 
 require (
-	github.com/Masterminds/semver/v3 v3.2.1
+	github.com/Masterminds/semver/v3 v3.5.0
 	github.com/hashicorp/terraform-json v0.23.0
 	github.com/mitchellh/colorstring v0.0.0-20190213212951-d06e56a500db
 )
